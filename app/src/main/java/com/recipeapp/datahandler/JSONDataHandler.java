@@ -1,27 +1,30 @@
 package com.recipeapp.datahandler;
-import com.recipeapp.model.Recipe;
+
 import java.io.IOException;
 import java.util.ArrayList;
-//JSON形式に対応したクラス
+import com.recipeapp.model.Recipe;
+
 public class JSONDataHandler implements DataHandler {
-    //文字列JSONを返してください。
+
     @Override
     public String getMode() {
-        return "JSON";
+        return "JSON"; // モードとしてJSONを返す
     }
+
     @Override
-    //処理の実装は行わないので定義し、nullをreturnしてください。
-    public ArrayList<Recipe> readData() {
+    public ArrayList<Recipe> readData() throws IOException {
+        // 処理の実装は行わず、nullを返す
         return null;
     }
-    @Override
-    //処理の実装は行わないので定義のみ行います。
-    public void writeData(Recipe recipe) {
 
-    }
     @Override
-    //処理の実装は行わないので定義し、nullをreturnしてください。
-    public ArrayList<Recipe> searchData(String keyword) {
+    public void writeData(Recipe recipe) throws IOException {
+        // 処理の実装は行わない
+    }
+
+    @Override
+    public ArrayList<Recipe> searchData(String keyword) throws IOException {
+        // 処理の実装は行わず、nullを返す
         return null;
     }
 }
